@@ -21,5 +21,5 @@
      echo '수정하는 과정에서 문제가 발생했습니다. 관리자에게 문의하세요.';
      error_log(mysqli_error($link));
  } else {
-     header('Location : company.php');
+     header('Location: company.php');
  }
