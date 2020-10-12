@@ -1,6 +1,5 @@
 <?php  
     $link = mysqli_connect('localhost','admin', 'admin', 'employees');
-    settype($_GET['emp_no'], 'integer');
     $filtered_id = mysqli_real_escape_string($link, $_POST['emp_no']);
     
     $query = "
