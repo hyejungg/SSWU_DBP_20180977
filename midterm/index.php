@@ -16,6 +16,8 @@ while($row = mysqli_fetch_array($result)) {
   $recomend_list .= '<td>'.$row['count(*)'].'</td>';
   $recomend_list .= '</tr>';
 } 
+mysqli_free_result($result); 
+mysqli_close($link);
 ?>
 
 <!DOCTYPE html>
@@ -58,9 +60,8 @@ while($row = mysqli_fetch_array($result)) {
     </table>
     <br>
     <hr>
-    <h2><a href="film_list.php">DVD 대여 가능한 영화 목록</a></h2><br>
+    <h2><a href="film_list.php">DVD 대여 가능한 영화 목록</a></h2>
     <h2><a href="category_film_list.php">카테고리별 영화 목록</a></h2><br>
-    <a href=""></a><br>
     <form action="search_actor_film.php" method="POST">
         배우명(first_name):
         <input type="text" name="first_name" placeholder="first_name">
